@@ -1,0 +1,40 @@
+{
+  "name": "Root",
+  "children": [
+    {
+      "name": "Grupo A",
+      "children": [
+        { "name": "Elemento A1", "value": 100 },
+        { "name": "Elemento A2", "value": 300 }
+      ]
+    },
+    {
+      "name": "Grupo B",
+      "children": [
+        { "name": "Elemento B1", "value": 200 },
+        { "name": "Elemento B2", "value": 400 },
+        { "name": "Elemento B3", "value": 150 }
+      ]
+    },
+    {
+      "name": "Grupo C",
+      "children": [
+        {
+          "name": "Elemento C1",
+          "children": [
+            { "name": "Subelemento C1.1", "value": 50 },
+            { "name": "Subelemento C1.2", "value": 75 }
+          ]
+        },
+        { "name": "Elemento C2", "value": 350 }
+      ]
+    },
+    {
+      "name": "Grupo D",
+      "children": [
+        { "name": "Elemento D1", "value": 500 },
+        { "name": "Elemento D2", "value": 600 }
+      ]
+    }
+  ]
+}
