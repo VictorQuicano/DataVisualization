@@ -18,7 +18,6 @@ const Treemap = ({ data, width = 1154, height = 1154 }) => {
       data.children.map((d) => d.name),
       d3.schemeTableau10
     );
-
     // Jerarquía y layout
     const root = d3
       .treemap()
