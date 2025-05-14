@@ -1,8 +1,37 @@
 import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
+function formatTime(seconds) {
+  if (seconds < 60) {
+    return `${Math.round(seconds)} s`;
+  } else if (seconds < 3600) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.round(seconds % 60);
+    return secs > 0 ? `${mins} min ${secs} s` : `${mins} min`;
+  } else {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    return mins > 0 ? `${hrs} h ${mins} min` : `${hrs} h`;
+  }
+}
+
 export default function Treemap({ data }) {
   const svgRef = useRef(null);
+  // Create our treemap visualization
+  const [width, setWidth] = useState(window.innerWidth - 20);
+  const [height, setHeight] = useState(window.innerHeight - 20);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth - 20);
+      setHeight(window.innerHeight - 20);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!svgRef.current || !data) return;
@@ -10,9 +39,6 @@ export default function Treemap({ data }) {
     // Clear previous content
     d3.select(svgRef.current).selectAll("*").remove();
 
-    // Create our treemap visualization
-    const width = 928;
-    const height = 924;
     let group;
 
     // This custom tiling function adapts the built-in binary tiling function
@@ -39,13 +65,13 @@ export default function Treemap({ data }) {
     const y = d3.scaleLinear().rangeRound([0, height]);
 
     // Formatting utilities.
-    const format = d3.format(",d");
+    const format = formatTime;
     const getName = (d) =>
       d
         .ancestors()
         .reverse()
         .map((d) => d.data.name)
-        .join("/");
+        .join(" / ");
 
     // Create the SVG container.
     const svg = d3
@@ -60,6 +86,8 @@ export default function Treemap({ data }) {
     group = svg.append("g").call(render, root);
 
     function render(group, root) {
+      const usedPatterns = new Set();
+
       const node = group
         .selectAll("g")
         .data(root.children ? root.children.concat(root) : [root])
@@ -75,15 +103,45 @@ export default function Treemap({ data }) {
       node
         .append("rect")
         .attr("id", (d) => {
-          // Create a unique ID for each leaf
           d.leafUid = `leaf-${
             d.id || Math.random().toString(36).substring(2, 9)
           }`;
           return d.leafUid;
         })
-        .attr("fill", (d) =>
-          d === root ? "#fff" : d.children ? "#ccc" : "#ddd"
-        )
+        .attr("fill", (d) => {
+          if (d.data.thumbnail) {
+            const patternCache = new Map();
+            const w = d.x1 - d.x0; // ancho en unidades SVG
+            const h = d.y1 - d.y0; // alto en unidades SVG
+
+            const patternId = `pattern-${
+              d.id || Math.random().toString(36).substring(2, 9)
+            }`;
+
+            if (!patternCache.has(patternId)) {
+              const pattern = svg
+                .append("defs")
+                .append("pattern")
+                .attr("id", patternId)
+                .attr("patternUnits", "userSpaceOnUse")
+                .attr("width", w)
+                .attr("height", h);
+
+              // Y la imagen interior:
+              pattern
+                .append("image")
+                .attr("xlink:href", d.data.thumbnail)
+                .attr("width", w)
+                .attr("height", h)
+                .attr("preserveAspectRatio", "xMidYMid slice");
+
+              patternCache.set(patternId, true);
+            }
+
+            return `url(#${patternId})`;
+          }
+          return "#ddd";
+        })
         .attr("stroke", "#fff");
 
       node
@@ -103,11 +161,7 @@ export default function Treemap({ data }) {
         .attr("clip-path", (d) => `url(#${d.clipUid})`)
         .attr("font-weight", (d) => (d === root ? "bold" : null))
         .selectAll("tspan")
-        .data((d) =>
-          (d === root ? getName(d) : d.data.name)
-            .split(/(?=[A-Z][^A-Z])/g)
-            .concat(format(d.value))
-        )
+        .data((d) => [d === root ? getName(d) : d.data.name, format(d.value)])
         .join("tspan")
         .attr("x", 3)
         .attr(
@@ -123,6 +177,12 @@ export default function Treemap({ data }) {
         .text((d) => d);
 
       group.call(position, root);
+
+      svg
+        .select("defs.patterns")
+        .selectAll("pattern")
+        .filter((id) => !usedPatterns.has(id))
+        .remove();
     }
 
     function position(group, root) {
@@ -153,7 +213,26 @@ export default function Treemap({ data }) {
             .transition(t)
             .attrTween("opacity", () => d3.interpolate(0, 1))
             .call(position, d)
-        );
+        )
+        .on("end", () => {
+          // Para cada rectángulo con patrón:
+          svg.selectAll("rect[fill^='url(#pattern-']").each(function (d) {
+            const rect = d3.select(this);
+            const pid = rect.attr("fill").match(/url\(#(pattern-[^)]+)\)/)[1];
+            const pattern = svg.select(`#${pid}`);
+
+            // recalcula en px el ancho y alto según la nueva escala
+            const newW = x(d.x1) - x(d.x0);
+            const newH = y(d.y1) - y(d.y0);
+
+            pattern
+              .attr("width", newW)
+              .attr("height", newH)
+              .select("image")
+              .attr("width", newW)
+              .attr("height", newH);
+          });
+        });
     }
 
     // When zooming out, draw the old nodes on top, and fade them out.
@@ -174,15 +253,33 @@ export default function Treemap({ data }) {
             .attrTween("opacity", () => d3.interpolate(1, 0))
             .call(position, d)
         )
-        .call((t) => group1.transition(t).call(position, d.parent));
+        .call((t) => group1.transition(t).call(position, d.parent))
+        .on("end", () => {
+          // Para cada rectángulo con patrón:
+          svg.selectAll("rect[fill^='url(#pattern-']").each(function (d) {
+            const rect = d3.select(this);
+            const pid = rect.attr("fill").match(/url\(#(pattern-[^)]+)\)/)[1];
+            const pattern = svg.select(`#${pid}`);
+
+            // recalcula en px el ancho y alto según la nueva escala
+            const newW = x(d.x1) - x(d.x0);
+            const newH = y(d.y1) - y(d.y0);
+
+            pattern
+              .attr("width", newW)
+              .attr("height", newH)
+              .select("image")
+              .attr("width", newW)
+              .attr("height", newH);
+          });
+        });
     }
   }, [data]);
 
   return (
-    <div className="flex flex-col items-center w-full">
-      <h2 className="text-xl font-bold mb-4">Treemap Interactivo</h2>
+    <div className="flex flex-col items-center w-full h-screen">
       <div className="w-full overflow-auto">
-        <svg ref={svgRef} className="w-full max-w-4xl mx-auto"></svg>
+        <svg ref={svgRef} className="w-full max-w-full"></svg>
       </div>
       <p className="text-sm text-gray-600 mt-2">
         Haz clic en un grupo para hacer zoom. Haz clic en el encabezado para

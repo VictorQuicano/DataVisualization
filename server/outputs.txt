@@ -1,0 +1,89 @@
+{
+  "choices": [
+    {
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "serigrafia con TINTA PUFF de alto relieve🔥parte 2 #viral #estampados #serigrafiatextil #estampado: Arte  \nAplicando Técnica de puff alto relieve con plastisol #puf #plastisol #serigrafia: Arte  \nTodas las legiones de Marines espaciales explicadas! | Warhammer 40k historia (Parte 1/3): Ciencia ficción  \nIntroducción a Warhammer 40.000: Ciencia ficción  \nCómo hacer una base de diorama oceánica realista | Construyendo el AFV Club U-boot Tipo VII D: Miniatura  \nStarboy x I Feel It Coming: R&B  \nSunflower, Post Malone, Swae Lee, (Extended Versión): Pop  \nPost Malone - I Like You (A Happier Song) w. Doja Cat [Official Music Video]: Pop  \nEl Cadav3r de la Novia : La Historia en 1 Video: Terror  \nEL DIA QUE LA TIERRA EXPLOTO | RESUMEN EN 22 MINUTOS: Drama  \nRayos Laser - El Día y La Noche (feat. Juan Ingaramo): Indie  \nElton John, Dua Lipa - Cold Heart (PNAU Remix) (Official Video): Electrónica  \nDJane HouseKat Feat. Rameez - Girls In Luv (Official Audio): Electrónica  \nRayos Laser - Tantas Cosas Dije Ayer (Visualizer): Indie  \nCuarteto De Nos - En el cuarto de Nico: Rock  \nRayos Laser - Souvenir (Visualizer): Indie  \nRayos Laser - Tu Nombre: Indie  \nLAS INJUSTICIAS A UN PROFESOR : PELICULA PERUANA: Drama  \nAmérica Noticias: Mujer ebria causó accidente de tránsito y protagonizó escándalo en la vía pública: Social  \nMitski - My Love Mine All Mine (Extended Version): Indie  \nBAD BUNNY - BAILE INoLVIDABLE (Visualizer): Hip-Hop  \nBAD BUNNY - BAILE INoLVIDABLE (Video Oficial): Hip-Hop  \nJaze, Elsa y Elmar - un mensaje de voz (feat. Elsa y Elmar) (Video Lyric): Indie  \nJaze - caminar al revés (Video Lyric): Indie  \nFortever HALO X Embroidery Machine: Tecnología  \nHALO-100 (240*320MM)  FORTEVER brand Halo-100 embroidery machine: Tecnología  \nJaze - la terminal (Video Lyric): Indie  \nMan arrested for shooting 2 men he said were Palestinians 17 times in Miami Beach: Social  \nResidente - René (Official Video): Hip-Hop  \nJaze - la terminal (Video Oficial): Indie  \nJaze, Caloncho - pensé en ti (feat. Caloncho) (Video Lyric): Indie  \nkaraoke Llamada Al Buzón El Frizian ft Los Melendres: Fiesta  \nJulión Álvarez y su Norteño Banda - Rey Sin Reina (Video Lyric): Corrido  \nRAYOS LASER - EL REFLEJO (Full Album): Indie  \nRayos Laser - Un Recuerdo de Vos y de Mí: Indie  \nRayos Laser -  El Fin Del Amor (Lyric Video): Indie  \nRayos Laser - La Pelea: Indie  \nRayos Láser - Un Regalo Tuyo: Indie  \nRayos Laser - Te Vas: Indie  \nRayos Laser - Se Borró: Indie  \n¿EXISTE el DESTINO? El DILEMA EXISTENCIAL de Mr. Nobody | Relato y Reflexiones: Filosofía  \n¿CÓMO se ELEGIRÁ al NUEVO PAPA? | Concláve | Relato y Reflexiones: Religión  \nHow I made Captain Jack Sparrow's BLACK PEARL Ship Model in 12 Minutes (NOT Really): Cine",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1747150992,
+  "id": "chatcmpl-BWm4efbPfKFRc9lRSCoh7U34pnwae",
+  "model": "gpt-4.1-nano",
+  "object": "chat.completion",
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "system_fingerprint": "fp_a0257c8b74",
+  "usage": {
+    "completion_tokens": 808,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens": 1139,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 1947
+  }
+}
+[======================]
