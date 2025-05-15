@@ -217,15 +217,17 @@ export function groupVideosByWeek(data) {
             videos[0]
           );
 
+          const emoji = metadata[metaName]?.emoji || metaName;
+          const color = metadata[metaName]?.color || "#fff";
+
           return {
-            name: metaName,
+            name: emoji,
             thumbnail: metaTopVideo.thumbnail,
-            metatag: metaName,
+            metatag: color, // Seguimos guardando el metatag original
             children: videos,
           };
         }
       );
-
       return {
         name: emoji,
         thumbnail: topVideo.thumbnail,
