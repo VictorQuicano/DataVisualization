@@ -76,9 +76,9 @@ export default function Treemap({ data }) {
     // Create the SVG container.
     const svg = d3
       .select(svgRef.current)
-      .attr("viewBox", [0.5, -30.5, width, height + 30])
+      .attr("viewBox", [0.5, -60.5, width, height + 60])
       .attr("width", width)
-      .attr("height", height + 30)
+      .attr("height", height + 60)
       .attr("style", "max-width: 100%; height: auto;")
       .style("font", "10px sans-serif");
 
@@ -160,6 +160,7 @@ export default function Treemap({ data }) {
         .append("text")
         .attr("clip-path", (d) => `url(#${d.clipUid})`)
         .attr("font-weight", (d) => (d === root ? "bold" : null))
+        .attr("font-size", "2em")
         .selectAll("tspan")
         .data((d) => [d === root ? getName(d) : d.data.name, format(d.value)])
         .join("tspan")
@@ -176,6 +177,21 @@ export default function Treemap({ data }) {
         )
         .text((d) => d);
 
+      node.selectAll("text").each(function () {
+        const text = d3.select(this);
+        const bbox = this.getBBox();
+
+        const padding = { top: 4, right: 2, bottom: 4, left: 2 };
+
+        const rect = d3
+          .select(this.parentNode)
+          .insert("rect", "text") // inserta antes del text
+          .attr("x", bbox.x - padding.left)
+          .attr("y", bbox.y - padding.top)
+          .attr("width", bbox.width + padding.left + padding.right)
+          .attr("height", bbox.height + padding.top + padding.bottom)
+          .attr("fill", "white");
+      });
       group.call(position, root);
 
       svg
@@ -189,11 +205,11 @@ export default function Treemap({ data }) {
       group
         .selectAll("g")
         .attr("transform", (d) =>
-          d === root ? `translate(0,-30)` : `translate(${x(d.x0)},${y(d.y0)})`
+          d === root ? `translate(0,-60)` : `translate(${x(d.x0)},${y(d.y0)})`
         )
         .select("rect")
         .attr("width", (d) => (d === root ? width : x(d.x1) - x(d.x0)))
-        .attr("height", (d) => (d === root ? 30 : y(d.y1) - y(d.y0)));
+        .attr("height", (d) => (d === root ? 60 : y(d.y1) - y(d.y0)));
     }
 
     // When zooming in, draw the new nodes on top, and fade them in.

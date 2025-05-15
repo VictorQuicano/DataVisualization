@@ -1,6 +1,7 @@
 {
   "Música": {
-    "color": "#FF0000",
+    "color": "#546A76",
+    "emoji": "🎶",
     "tags": [
       "Urbano",
       "Urbano",
@@ -29,7 +30,8 @@
     ]
   },
   "Educación y Conocimiento": {
-    "color": "#00FF00",
+    "color": "#88A0A8",
+    "emoji": "📚",
     "tags": [
       "Tutorial",
       "Educación",
@@ -45,7 +47,8 @@
     ]
   },
   "Entretenimiento": {
-    "color": "#0000FF",
+    "color": "#B4CEB3",
+    "emoji": "🎉",
     "tags": [
       "Comedia",
       "Parodia",
@@ -70,7 +73,8 @@
     ]
   },
   "Reflexión y Sociedad": {
-    "color": "#FFFF00",
+    "color": "#DBD3C9",
+    "emoji": "💭",
     "tags": [
       "Debate",
       "Debates",
@@ -87,7 +91,8 @@
     ]
   },
   "Estilo de Vida y Pasatiempos": {
-    "color": "#FF00FF",
+    "color": "#FAD4D8",
+    "emoji": "🏖️",
     "tags": ["Hobby", "Viajes", "Verano", "Motociclismo", "Modelismo Selecto"]
   }
 }

@@ -14,7 +14,7 @@ function App() {
     children: dataS,
   };
 
-  //console.log("dataS", dataS);
+  console.log("dataS", dataS);
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gray-100">
       <ZoomableTreemap data={dataS} />

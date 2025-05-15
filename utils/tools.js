@@ -35,6 +35,16 @@ export function timeToSeconds(timeStr) {
  * ]
  */
 
+const dayToEmoji = {
+  domingo: "☀️",
+  lunes: "😩",
+  martes: "💪",
+  miércoles: "🐪",
+  jueves: "🫂",
+  viernes: "🎉",
+  sábado: "😎",
+};
+
 export function groupVideosByWeek(data) {
   const today = new Date();
 
@@ -180,6 +190,9 @@ export function groupVideosByWeek(data) {
   // 7) Construir estructura final
   return Object.values(weeksMap).map((w) => {
     const dayEntries = Object.entries(w.days).map(([day, vids]) => {
+      const dayLower = day.toLowerCase();
+      const emoji = dayToEmoji[dayLower] || capitalize(dayLower);
+
       // Video más largo del día
       const topVideo = vids.reduce(
         (a, b) => (a.value > b.value ? a : b),
@@ -199,7 +212,6 @@ export function groupVideosByWeek(data) {
 
       const metaChildren = Object.entries(metaGroups).map(
         ([metaName, videos]) => {
-          // Video más largo del metatag
           const metaTopVideo = videos.reduce(
             (a, b) => (a.value > b.value ? a : b),
             videos[0]
@@ -208,21 +220,20 @@ export function groupVideosByWeek(data) {
           return {
             name: metaName,
             thumbnail: metaTopVideo.thumbnail,
-            metatag: metaName, // El metatag es sí mismo
+            metatag: metaName,
             children: videos,
           };
         }
       );
 
       return {
-        name: capitalize(day),
+        name: emoji,
         thumbnail: topVideo.thumbnail,
         metatag: dayMetatag,
         children: metaChildren,
       };
     });
 
-    // Calcular metatag más frecuente de la semana y video más largo
     const allVideos = dayEntries.flatMap((d) =>
       d.children.flatMap((c) => c.children)
     );
@@ -232,12 +243,11 @@ export function groupVideosByWeek(data) {
     );
     const weekMetatag = getMostFrequentMetatag(allVideos);
 
+    const numDays = dayEntries.length;
+    const weekEmoji = "📅".repeat(numDays);
+
     return {
-      name: `del ${format(w.start, "d 'de' MMMM", { locale: es })} al ${format(
-        w.end,
-        "d 'de' MMMM",
-        { locale: es }
-      )}`,
+      name: weekEmoji,
       thumbnail: weekTopVideo.thumbnail,
       metatag: weekMetatag,
       children: dayEntries,
