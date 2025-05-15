@@ -7,8 +7,7 @@ import ZoomableTreemap from "./ZoomableTree.jsx";
 import TreemapChart from "./ZoomableTree.jsx";
 
 function App() {
-  let dataS = JSON.stringify(groupVideosByWeek(data), null, 2);
-  dataS = JSON.parse(dataS);
+  let dataS = groupVideosByWeek(data);
 
   dataS = {
     name: "root",

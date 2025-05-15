@@ -1,0 +1,93 @@
+{
+  "Música": {
+    "color": "#FF0000",
+    "tags": [
+      "Urbano",
+      "Urbano",
+      "Pop",
+      "Rock",
+      "Electro",
+      "Electrónico",
+      "Lounge",
+      "Indie",
+      "Alternative",
+      "Alternativo",
+      "K-Pop",
+      "J-Pop",
+      "Latin",
+      "Jazz",
+      "Clásica",
+      "Rap",
+      "Hip-Hop",
+      "Dance",
+      "Soul",
+      "Instrumental",
+      "RegionalMexicano",
+      "Tradicional",
+      "Electró",
+      "Música"
+    ]
+  },
+  "Educación y Conocimiento": {
+    "color": "#00FF00",
+    "tags": [
+      "Tutorial",
+      "Educación",
+      "Historia",
+      "Cultura",
+      "Ciencia",
+      "Tecnología",
+      "Documental",
+      "Informativo",
+      "Infomativo",
+      "Consejos",
+      "Creatividad"
+    ]
+  },
+  "Entretenimiento": {
+    "color": "#0000FF",
+    "tags": [
+      "Comedia",
+      "Parodia",
+      "Humor",
+      "Satírico",
+      "Unboxing",
+      "Cine",
+      "Series",
+      "Drama",
+      "Dramas",
+      "Aventura",
+      "Acción",
+      "Terror",
+      "Fantasía",
+      "Anime",
+      "Animación",
+      "Comics",
+      "Videojuegos",
+      "Juegos",
+      "CienciaFicción",
+      "Relajación"
+    ]
+  },
+  "Reflexión y Sociedad": {
+    "color": "#FFFF00",
+    "tags": [
+      "Debate",
+      "Debates",
+      "Sociedad",
+      "Sociedaddebate",
+      "Motivación",
+      "Reflexión",
+      "Reflexiones",
+      "Vida",
+      "Salud",
+      "Religión",
+      "Social",
+      "Entretenimiento"
+    ]
+  },
+  "Estilo de Vida y Pasatiempos": {
+    "color": "#FF00FF",
+    "tags": ["Hobby", "Viajes", "Verano", "Motociclismo", "Modelismo Selecto"]
+  }
+}

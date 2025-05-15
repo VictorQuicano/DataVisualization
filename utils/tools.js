@@ -1,5 +1,7 @@
 import { parse, format, startOfWeek, endOfWeek } from "date-fns";
 import { es } from "date-fns/locale";
+import metadata from "../resources/metatags.json";
+import { meta } from "@eslint/js";
 
 export function timeToSeconds(timeStr) {
   const parts = timeStr.split(":").map(Number);
@@ -36,14 +38,12 @@ export function timeToSeconds(timeStr) {
 export function groupVideosByWeek(data) {
   const today = new Date();
 
-  //console.log(response);
-
-  // 1) Convert video.duracion to seconds, handling special labels
+  // 1) Normalización de duración
   function normalizeDuration(label) {
     if (typeof label !== "string") return 0;
     const name = label.trim().toUpperCase();
-    if (name === "SHORTS") return "00:30"; // 30 seconds
-    if (name === "EN DIRECTO" || name === "EN VIVO") return "05:00:00"; // assume 5h default
+    if (name === "SHORTS") return "00:30";
+    if (name === "EN DIRECTO" || name === "EN VIVO") return "05:00:00";
     return label;
   }
 
@@ -67,7 +67,7 @@ export function groupVideosByWeek(data) {
     return 0;
   }
 
-  // 2) Resolve Spanish date labels to Date objects
+  // 2) Resolución de fechas
   function resolveDate(str) {
     const lower = String(str).toLowerCase();
     if (lower === "hoy") return today;
@@ -77,7 +77,7 @@ export function groupVideosByWeek(data) {
         today.getMonth(),
         today.getDate() - 1
       );
-    // weekdays mapping
+
     const weekdays = [
       "domingo",
       "lunes",
@@ -96,7 +96,7 @@ export function groupVideosByWeek(data) {
         weekStart.getDate() + idx
       );
     }
-    // parse absolute Spanish date like "2 may", "20 abril"
+
     try {
       return parse(str, "d MMM", today, { locale: es });
     } catch (e) {
@@ -105,20 +105,35 @@ export function groupVideosByWeek(data) {
     }
   }
 
-  // 3) Flatten all videos with resolved Date and computed seconds
+  // 3) Mapeo de tags a metatags
+  function buildTagToMeta(metadata) {
+    const tagToMeta = {};
+    for (const [metaName, metaInfo] of Object.entries(metadata)) {
+      for (const tag of metaInfo.tags) {
+        tagToMeta[tag.toLowerCase()] = metaName;
+      }
+    }
+    return tagToMeta;
+  }
+
+  const tagToMeta = buildTagToMeta(metadata);
+
+  // 4) Aplanar y procesar videos
   const flat = [];
   data.forEach((dayEntry) => {
     const dt = resolveDate(dayEntry.fecha);
     if (!dt) return;
+
     dayEntry.videos.forEach((video) => {
       const norm = normalizeDuration(video.duracion);
       video.value = timeToSeconds(norm);
       video.name = video.titulo;
+      video.metatag = tagToMeta[video.tag?.toLowerCase()] || "Otros";
       flat.push({ date: dt, video });
     });
   });
 
-  // 4) Group by exact date (yyyy-MM-dd)
+  // 5) Agrupar por fecha exacta
   const byDate = {};
   flat.forEach(({ date, video }) => {
     const key = format(date, "yyyy-MM-dd");
@@ -126,9 +141,10 @@ export function groupVideosByWeek(data) {
     byDate[key].videos.push(video);
   });
 
-  // 5) Sort dates and group into weeks
+  // 6) Ordenar fechas y agrupar por semanas
   const dateKeys = Object.keys(byDate).sort();
   const weeksMap = {};
+
   dateKeys.forEach((key) => {
     const { date, videos } = byDate[key];
     const weekStart = startOfWeek(date, { weekStartsOn: 1 });
@@ -137,33 +153,84 @@ export function groupVideosByWeek(data) {
       weekEnd,
       "yyyy-MM-dd"
     )}`;
-    if (!weeksMap[weekKey])
+
+    if (!weeksMap[weekKey]) {
       weeksMap[weekKey] = { start: weekStart, end: weekEnd, days: {} };
+    }
+
     const dayName = format(date, "EEEE", { locale: es });
     weeksMap[weekKey].days[dayName] = videos;
   });
 
-  // 6) Build final structure
+  // Función para calcular el metatag más frecuente
+  function getMostFrequentMetatag(videos) {
+    const metaCount = {};
+
+    videos.forEach((video) => {
+      const meta = video.metatag;
+      metaCount[meta] = (metaCount[meta] || 0) + 1;
+    });
+
+    return Object.entries(metaCount).reduce(
+      (a, b) => (b[1] > a[1] ? b : a),
+      ["Otros", 0]
+    )[0];
+  }
+
+  // 7) Construir estructura final
   return Object.values(weeksMap).map((w) => {
     const dayEntries = Object.entries(w.days).map(([day, vids]) => {
-      // Encuentra el video de mayor duración en el día
+      // Video más largo del día
       const topVideo = vids.reduce(
         (a, b) => (a.value > b.value ? a : b),
         vids[0]
       );
+
+      // Agrupar por metatag
+      const metaGroups = {};
+      vids.forEach((video) => {
+        const meta = video.metatag;
+        if (!metaGroups[meta]) metaGroups[meta] = [];
+        metaGroups[meta].push(video);
+      });
+
+      // Metatag más frecuente del día
+      const dayMetatag = getMostFrequentMetatag(vids);
+
+      const metaChildren = Object.entries(metaGroups).map(
+        ([metaName, videos]) => {
+          // Video más largo del metatag
+          const metaTopVideo = videos.reduce(
+            (a, b) => (a.value > b.value ? a : b),
+            videos[0]
+          );
+
+          return {
+            name: metaName,
+            thumbnail: metaTopVideo.thumbnail,
+            metatag: metaName, // El metatag es sí mismo
+            children: videos,
+          };
+        }
+      );
+
       return {
         name: capitalize(day),
-        thumbnail: topVideo.thumbnail, // añade thumbnail del día
-        children: vids,
+        thumbnail: topVideo.thumbnail,
+        metatag: dayMetatag,
+        children: metaChildren,
       };
     });
 
-    // Encuentra el thumbnail de mayor duración en toda la semana
-    const allVideos = dayEntries.flatMap((d) => d.children);
-    const weekTop = allVideos.reduce(
+    // Calcular metatag más frecuente de la semana y video más largo
+    const allVideos = dayEntries.flatMap((d) =>
+      d.children.flatMap((c) => c.children)
+    );
+    const weekTopVideo = allVideos.reduce(
       (a, b) => (a.value > b.value ? a : b),
       allVideos[0]
     );
+    const weekMetatag = getMostFrequentMetatag(allVideos);
 
     return {
       name: `del ${format(w.start, "d 'de' MMMM", { locale: es })} al ${format(
@@ -171,16 +238,14 @@ export function groupVideosByWeek(data) {
         "d 'de' MMMM",
         { locale: es }
       )}`,
-      thumbnail: weekTop.thumbnail, // añade thumbnail de la semana
+      thumbnail: weekTopVideo.thumbnail,
+      metatag: weekMetatag,
       children: dayEntries,
     };
   });
 }
 
-function tagVideos(data) {
-  let tags = {};
-}
-
+// Función auxiliar para capitalizar strings
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
