@@ -231,7 +231,7 @@ export function groupVideosByWeek(data) {
       return {
         name: emoji,
         thumbnail: topVideo.thumbnail,
-        metatag: dayMetatag,
+        metatag: metadata[dayMetatag]?.color || dayMetatag,
         children: metaChildren,
       };
     });
@@ -251,7 +251,7 @@ export function groupVideosByWeek(data) {
     return {
       name: weekEmoji,
       thumbnail: weekTopVideo.thumbnail,
-      metatag: weekMetatag,
+      metatag: metadata[weekMetatag]?.color || weekMetatag,
       children: dayEntries,
     };
   });

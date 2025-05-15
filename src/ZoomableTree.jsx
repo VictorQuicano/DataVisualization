@@ -177,20 +177,23 @@ export default function Treemap({ data }) {
         )
         .text((d) => d);
 
-      node.selectAll("text").each(function () {
+      node.selectAll("text").each(function (d) {
         const text = d3.select(this);
         const bbox = this.getBBox();
-
         const padding = { top: 4, right: 2, bottom: 4, left: 2 };
+
+        // Obtener el color del metatag
+        const metatagColor = d.data.metatag?.color || "#ffffff"; // Blanco por defecto si no hay color
 
         const rect = d3
           .select(this.parentNode)
-          .insert("rect", "text") // inserta antes del text
+          .insert("rect", "text")
           .attr("x", bbox.x - padding.left)
           .attr("y", bbox.y - padding.top)
           .attr("width", bbox.width + padding.left + padding.right)
           .attr("height", bbox.height + padding.top + padding.bottom)
-          .attr("fill", "white");
+          .attr("fill", metatagColor)
+          .attr("opacity", 0.8); // Puedes ajustar la opacidad si es necesario
       });
       group.call(position, root);
 
