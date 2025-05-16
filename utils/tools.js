@@ -246,10 +246,12 @@ export function groupVideosByWeek(data) {
     const weekMetatag = getMostFrequentMetatag(allVideos);
 
     const numDays = dayEntries.length;
-    const weekEmoji = "📅".repeat(numDays);
 
     return {
-      name: weekEmoji,
+      name: `${"📅".repeat(numDays)} ${format(w.start, "dd/MM")} to ${format(
+        w.end,
+        "dd/MM"
+      )}`,
       thumbnail: weekTopVideo.thumbnail,
       metatag: metadata[weekMetatag]?.color || weekMetatag,
       children: dayEntries,
