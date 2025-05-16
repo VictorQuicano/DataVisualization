@@ -1,11 +1,651 @@
 [
   {
-    "fecha": "Hoy",
+    "fecha": "Ayer",
     "videos": [
+      {
+        "titulo": "CONVERTIRSE en un MILAGRO | Todopoderoso | Relato y Reflexiones",
+        "thumbnail": "https://i.ytimg.com/vi/5o15fL3HkfY/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=5o15fL3HkfY&t=939s",
+        "canal": "Farid Dieck",
+        "duracion": "23:11",
+        "tag": "Reflexión"
+      },
+      {
+        "titulo": "Sobreanalizando AFHS | PEPE Y TITO ERAN LA ESENCIA DE AFHS",
+        "thumbnail": "https://i.ytimg.com/vi/A1M40mwYVzU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=A1M40mwYVzU",
+        "canal": "Mate en VHS",
+        "duracion": "30:08",
+        "tag": "Series"
+      },
+      {
+        "titulo": "Where The Wind Blows OST | One Piece Film Red | Subtitulado Al Español.",
+        "thumbnail": "https://i.ytimg.com/vi/QWePhaICHMw/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=QWePhaICHMw",
+        "canal": "Mochi Mochi",
+        "duracion": "4:33",
+        "tag": "K-pop"
+      },
+      {
+        "titulo": "Comedy ED.1 l Spy x Family l Subtitulado Al Español.",
+        "thumbnail": "https://i.ytimg.com/vi/QWBqXDUasY8/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=QWBqXDUasY8",
+        "canal": "Mochi Mochi",
+        "duracion": "4:02",
+        "tag": "K-pop"
+      },
+      {
+        "titulo": "BAD BUNNY MIX ALBUMS - BAD BUNNY PLAYLIST",
+        "thumbnail": "https://i.ytimg.com/vi/yCMEAAkVFd4/sddefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=yCMEAAkVFd4&t=1737s",
+        "canal": "Roni Diaz",
+        "duracion": "36:28",
+        "tag": "Urbano"
+      },
+      {
+        "titulo": "🔶️EL INMORTAL QUE QUERÍA MOR1R CONOCIÓ A UNA CHICA QUE DESTRUYE TODO LO QUE TOCA (1-7)-Anime Resumen",
+        "thumbnail": "https://i.ytimg.com/vi/vPmRtOv_rIk/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=vPmRtOv_rIk&t=1291s",
+        "canal": "Dalemsito",
+        "duracion": "1:13:04",
+        "tag": "Resumen"
+      },
+      {
+        "titulo": "The 1",
+        "thumbnail": "https://i.ytimg.com/vi/NefIygtTu-8/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=NefIygtTu-8",
+        "canal": "muque",
+        "duracion": "3:12",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Sobreanalizando AFHS | CHARO Y REYNA SE NECESITABAN",
+        "thumbnail": "https://i.ytimg.com/vi/zpF7HQ3tO3U/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=zpF7HQ3tO3U&t=1363s",
+        "canal": "Mate en VHS",
+        "duracion": "42:52",
+        "tag": "Series"
+      },
+      {
+        "titulo": "La Gata Bajo La Lluvia",
+        "thumbnail": "https://i.ytimg.com/vi/7d9Sfbt3zW0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=7d9Sfbt3zW0",
+        "canal": "Mario y Sus Modales - Topic",
+        "duracion": "3:55",
+        "tag": "Latin"
+      },
+      {
+        "titulo": "Esteman - Hasta Que Tú Me Quieras",
+        "thumbnail": "https://i.ytimg.com/vi/3Be8ub1Vzgg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=3Be8ub1Vzgg",
+        "canal": "Esteman",
+        "duracion": "4:04",
+        "tag": "Latin"
+      },
+      {
+        "titulo": "Jaze - QNEPT (Video Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/h8TPz6IspCU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=h8TPz6IspCU",
+        "canal": "Jaze",
+        "duracion": "2:59",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "Jaze - caminar al revés (Video Lyric)",
+        "thumbnail": "https://i.ytimg.com/vi/ZblFXnv8eAA/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=ZblFXnv8eAA",
+        "canal": "Jaze",
+        "duracion": "3:05",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "Científico explica claramente la REALIDAD DEL FENTANILO, sin mentiras ni exageraciones",
+        "thumbnail": "https://i.ytimg.com/vi/YNf36rSx_8g/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=YNf36rSx_8g&t=691s",
+        "canal": "The Wild Project",
+        "duracion": "21:12",
+        "tag": "Ciencia"
+      },
+      {
+        "titulo": "EoO",
+        "thumbnail": "https://i.ytimg.com/vi/JYekRpqL4O8/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=JYekRpqL4O8",
+        "canal": "Bad Bunny",
+        "duracion": "3:25",
+        "tag": "Alternativo"
+      },
+      {
+        "titulo": "DINA SE VA DE VIAJE | #BRUTALIDADPOLITICA",
+        "thumbnail": "https://i.ytimg.com/vi/qXZskUOa4bg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=qXZskUOa4bg",
+        "canal": "El diario de Curwen",
+        "duracion": "1:27:47",
+        "tag": "Sociedad"
+      },
+      {
+        "titulo": "Sabrina Carpenter - Juno (Official Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/1aMCVgRKcP4/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=1aMCVgRKcP4",
+        "canal": "Sabrina Carpenter",
+        "duracion": "3:44",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "¿Por qué no hay motos diésel?",
+        "thumbnail": "https://i.ytimg.com/vi/O_NsIYvqHYA/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=O_NsIYvqHYA&t=464s",
+        "canal": "MotoCrónicas",
+        "duracion": "15:47",
+        "tag": "Tecnología"
+      },
+      {
+        "titulo": "🕵 SPY x FAMILY 스파이패밀리 OP/ED FULL모음 (Mixed Nuts, Comedy, Souvenir, 色彩 / 가사발음포함)",
+        "thumbnail": "https://i.ytimg.com/vi/QKXXF3uxzvI/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=QKXXF3uxzvI",
+        "canal": "열두키",
+        "duracion": "14:59",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "ano「ちゅ、多様性。」Music Video",
+        "thumbnail": "https://i.ytimg.com/vi/-lec--FlSJ4/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-lec--FlSJ4&pp=0gcJCY0JAYcqIYzv",
+        "canal": "ano official channel",
+        "duracion": "3:28",
+        "tag": "J-Pop"
+      },
+      {
+        "titulo": "Chilli Beans  Raise ライブ 2023",
+        "thumbnail": "https://i.ytimg.com/vi/AeTeZtnrQew/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=AeTeZtnrQew",
+        "canal": "Chilli Fan",
+        "duracion": "3:29",
+        "tag": "J-Pop"
+      },
+      {
+        "titulo": "[𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭] 언제 들어도 좋은 Chilli Beans 노래모음",
+        "thumbnail": "https://i.ytimg.com/vi/_n3bvFbJ1y4/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=_n3bvFbJ1y4&t=795s",
+        "canal": "일음 연구소",
+        "duracion": "20:16",
+        "tag": "J-Pop"
+      },
+      {
+        "titulo": "Chilli Beans. - Raise [TV animation \"ONE PIECE\" Ending Theme Song]",
+        "thumbnail": "https://i.ytimg.com/vi/RVx9KmrMiRM/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=RVx9KmrMiRM",
+        "canal": "Chilli Beans.",
+        "duracion": "3:38",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "Chilli Beans. - Raise (TVアニメ「ONE PIECE」Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/DO-DkrNVyjg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=DO-DkrNVyjg",
+        "canal": "Chilli Beans.",
+        "duracion": "3:36",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "『ONE PIECE』106巻 公式テーマソング「未来島 ~Future Island~」PV",
+        "thumbnail": "https://i.ytimg.com/vi/-Sb4wxbHh-4/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-Sb4wxbHh-4",
+        "canal": "ONE PIECE公式YouTubeチャンネル",
+        "duracion": "2:00",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "＜オープニング映像フル＞TVアニメ「ONE PIECE」／オープニングテーマ「あーーっす！」歌：きただにひろし",
+        "thumbnail": "https://i.ytimg.com/vi/YFbno_aPm0w/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=YFbno_aPm0w",
+        "canal": "ONE PIECE公式YouTubeチャンネル",
+        "duracion": "1:31",
+        "tag": "K-Pop"
+      },
+      {
+        "titulo": "Sparkle 「スパークル」「Movie Version」「君の名は。」",
+        "thumbnail": "https://i.ytimg.com/vi/tpH8TEkKQI4/hqdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=tpH8TEkKQI4",
+        "canal": "Kireina",
+        "duracion": "8:55",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "SEKAI NO OWARI \"The Peak\" ONE PIECE Lyrics MV",
+        "thumbnail": "https://i.ytimg.com/vi/SR89b0qqRAg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=SR89b0qqRAg",
+        "canal": "SEKAI NO OWARI",
+        "duracion": "3:43",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "ONE PIECE OP14：Fight Together/安室奈美恵",
+        "thumbnail": "https://i.ytimg.com/vi/JN3TpRQtcmk/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=JN3TpRQtcmk",
+        "canal": "マーチチャンネル",
+        "duracion": "4:14",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "＜主題歌 映像フル＞TVアニメ「ONE PIECE」／「最高到達点」歌：SEKAI NO OWARI",
+        "thumbnail": "https://i.ytimg.com/vi/yu-0eh9jdZg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=yu-0eh9jdZg",
+        "canal": "ONE PIECE公式YouTubeチャンネル",
+        "duracion": "1:31",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "DESTINO FINAL: TODA LA SAGA COMPLETA",
+        "thumbnail": "https://i.ytimg.com/vi/6b42-OqI4nU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=6b42-OqI4nU&t=1195s",
+        "canal": "FerDan",
+        "duracion": "59:14",
+        "tag": "Resumen"
+      },
+      {
+        "titulo": "QUÉ ES HADOOP",
+        "thumbnail": "https://i.ytimg.com/vi/yJslTGEmWm8/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=yJslTGEmWm8",
+        "canal": "OpenWebinars",
+        "duracion": "5:44",
+        "tag": "Tecnología"
+      },
+      {
+        "titulo": "DESTINO FINAL 6 hizo que ahora le tenga miedo la RESONANCIA MAGNÉTICA",
+        "thumbnail": "https://i.ytimg.com/vi/cRYhUmwkaaE/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=cRYhUmwkaaE&t=21s",
+        "canal": "Blackozu",
+        "duracion": "27:10",
+        "tag": "Terror"
+      },
+      {
+        "titulo": "Save Your Tears X After Hours (AHTD Versions)",
+        "thumbnail": "https://i.ytimg.com/vi/-JxkmtZFjps/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-JxkmtZFjps",
+        "canal": "Music Fox 40",
+        "duracion": "7:35",
+        "tag": "Electrónico"
+      },
+      {
+        "titulo": "Starboy x I Feel It Coming",
+        "thumbnail": "https://i.ytimg.com/vi/tZ4ZsUf3QEU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=tZ4ZsUf3QEU&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Howard Zhu",
+        "duracion": "8:14",
+        "tag": "Electro"
+      },
+      {
+        "titulo": "Sunflower, Post Malone, Swae Lee, (Extended Versión)",
+        "thumbnail": "https://i.ytimg.com/vi/5i3U90PNiRE/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=5i3U90PNiRE",
+        "canal": "A Bit Of Music",
+        "duracion": "8:34",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "BAD BUNNY - BAILE INoLVIDABLE (Visualizer) | DeBÍ TiRAR MáS FOToS",
+        "thumbnail": "https://i.ytimg.com/vi/2Y4zvxK0wYM/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=2Y4zvxK0wYM",
+        "canal": "Bad Bunny",
+        "duracion": "6:08",
+        "tag": "Urbano"
+      },
+      {
+        "titulo": "BAD BUNNY - BAILE INoLVIDABLE (Video Oficial) | DeBÍ TiRAR MáS FOToS",
+        "thumbnail": "https://i.ytimg.com/vi/a1Femq4NPxs/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=a1Femq4NPxs",
+        "canal": "Bad Bunny",
+        "duracion": "6:19",
+        "tag": "Urbano"
+      },
+      {
+        "titulo": "Residente - René (Official Video)",
+        "thumbnail": "https://i.ytimg.com/vi/O4f58BU_Hbs/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=O4f58BU_Hbs",
+        "canal": "Residente",
+        "duracion": "7:36",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "15 Minutes (15 Minute Version)",
+        "thumbnail": "https://i.ytimg.com/vi/KIl1p59gdb0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=KIl1p59gdb0&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Butera Concepts",
+        "duracion": "15:12",
+        "tag": "Electro"
+      },
+      {
+        "titulo": "EL CONTADOR (2016) | RESUMEN en 10 minutos",
+        "thumbnail": "https://i.ytimg.com/vi/dks5GO50qeg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=dks5GO50qeg&t=49s",
+        "canal": "Resumiendo",
+        "duracion": "10:09",
+        "tag": "Cine"
+      },
+      {
+        "titulo": "House trata a un paciente mientras cumple condena | Dr. House: Diagnóstico Médico",
+        "thumbnail": "https://i.ytimg.com/vi/C2rWAfu0AnU/sddefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=C2rWAfu0AnU&t=435s",
+        "canal": "Dr. House: Diagnóstico Médico",
+        "duracion": "9:58",
+        "tag": "Series"
+      },
+      {
+        "titulo": "el Capítulo Final de dr House  // Resumen + Teoría",
+        "thumbnail": "https://i.ytimg.com/vi/kI-gIB6BVnM/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=kI-gIB6BVnM",
+        "canal": "Activatumente",
+        "duracion": "12:43",
+        "tag": "Series"
+      },
+      {
+        "titulo": "Conan Gray - Maniac (Official Video)",
+        "thumbnail": "https://i.ytimg.com/vi/-E-_IRJU5w0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-E-_IRJU5w0",
+        "canal": "Conan Gray",
+        "duracion": "3:33",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "WOS - QUE SE HAGA TARDE",
+        "thumbnail": "https://i.ytimg.com/vi/Vopql0zn7ys/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=Vopql0zn7ys",
+        "canal": "WOS DS3",
+        "duracion": "3:34",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "The Weeknd - Less Than Zero (Official Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/UKunvvN2iCk/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=UKunvvN2iCk",
+        "canal": "The Weeknd",
+        "duracion": "3:32",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Carlos Sadness - Física Moderna (Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/tqzoDm9D9X8/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=tqzoDm9D9X8",
+        "canal": "Carlos Sadness",
+        "duracion": "3:38",
+        "tag": "Indie"
+      },
+      {
+        "titulo": "Orión - Lenguas Muertas (eris) / [Videoclip Oficial]",
+        "thumbnail": "https://i.ytimg.com/vi/J8GeNdT9pLk/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=J8GeNdT9pLk",
+        "canal": "Orión Official",
+        "duracion": "3:58",
+        "tag": "Alternativo"
+      },
+      {
+        "titulo": "Yami Safdie, Lasso - En Otra Vida (Video Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/A2aixdFINOQ/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=A2aixdFINOQ",
+        "canal": "Yami Safdie",
+        "duracion": "2:45",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Lasso, Cami - Odio Que No Te Odio",
+        "thumbnail": "https://i.ytimg.com/vi/xxfkLWaHeZY/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=xxfkLWaHeZY",
+        "canal": "LassoMusica",
+        "duracion": "3:49",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "WOS - MIRÁ MAMÁ (Video Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/Ee5D6R0ypgg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=Ee5D6R0ypgg",
+        "canal": "WOS DS3",
+        "duracion": "3:11",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "WOS - MORFEO (Video Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/4gOMr9xK0bI/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=4gOMr9xK0bI",
+        "canal": "WOS DS3",
+        "duracion": "4:06",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "ポルカドットスティングレイ「どうでもいいよ」よめないリリックビデオ",
+        "thumbnail": "https://i.ytimg.com/vi/jNIb9H2A90k/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=jNIb9H2A90k",
+        "canal": "ポルカドットスティングレイ",
+        "duracion": "3:08",
+        "tag": "J-Pop"
+      },
+      {
+        "titulo": "Alex Ponce, Lasso, Sebastian Llosa - Ve y Diles V2 (Remix) [Video Oficial]",
+        "thumbnail": "https://i.ytimg.com/vi/Qhw83uv0RUs/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=Qhw83uv0RUs",
+        "canal": "Alex Ponce",
+        "duracion": "2:58",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Rodri Bovino - Por Suerte (Cover IA Morat)",
+        "thumbnail": "https://i.ytimg.com/vi/JEASa9q0dfg/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=JEASa9q0dfg",
+        "canal": "Rodri Bovino",
+        "duracion": "3:02",
+        "tag": "Cover"
+      },
+      {
+        "titulo": "Nil Moliner - Calma (Videoclip Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/SPfR9Rz2bfI/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=SPfR9Rz2bfI",
+        "canal": "Nil Moliner",
+        "duracion": "3:09",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Lasso - Cuando Te Dejan De Querer",
+        "thumbnail": "https://i.ytimg.com/vi/7duNhqwdYOU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=7duNhqwdYOU",
+        "canal": "LassoMusica",
+        "duracion": "2:42",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Jaze, Elsa y Elmar - un mensaje de voz (feat. Elsa y Elmar) (Video Lyric)",
+        "thumbnail": "https://i.ytimg.com/vi/Cd2qQKH980M/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=Cd2qQKH980M",
+        "canal": "Jaze",
+        "duracion": "3:24",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "Jaze - la terminal (Video Oficial)",
+        "thumbnail": "https://i.ytimg.com/vi/EWnGdcUX4ms/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=EWnGdcUX4ms",
+        "canal": "Jaze",
+        "duracion": "3:53",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "LOUTA, WOS - QUEREME 💔|| LETRA",
+        "thumbnail": "https://i.ytimg.com/vi/OBTISKHMemw/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=OBTISKHMemw",
+        "canal": "LowDrow",
+        "duracion": "3:15",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "Rayos Laser - Tantas Cosas Dije Ayer (Visualizer)",
+        "thumbnail": "https://i.ytimg.com/vi/rpvhRsNKX1I/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=rpvhRsNKX1I",
+        "canal": "Rayos Laser",
+        "duracion": "3:36",
+        "tag": "Indie"
+      },
+      {
+        "titulo": "Zedd - Lucky (feat. Remi Wolf) [Official Music Video]",
+        "thumbnail": "https://i.ytimg.com/vi/-e55k1NICSA/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-e55k1NICSA&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Zedd",
+        "duracion": "2:13",
+        "tag": "Electro"
+      },
+      {
+        "titulo": "d4vd - Feel It (Official Music Video)",
+        "thumbnail": "https://i.ytimg.com/vi/vZi8ET9k11g/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=vZi8ET9k11g",
+        "canal": "d4vd",
+        "duracion": "2:35",
+        "tag": "Indie"
+      },
+      {
+        "titulo": "JVKE - this is what falling in love feels like (Leon Leiden Remix) Official Lyric Video",
+        "thumbnail": "https://i.ytimg.com/vi/y-M8YnYfxJU/sddefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=y-M8YnYfxJU",
+        "canal": "JVKE",
+        "duracion": "2:02",
+        "tag": "Electrónico"
+      },
+      {
+        "titulo": "Jaze - las consecuencias (Video Lyric)",
+        "thumbnail": "https://i.ytimg.com/vi/p2mBO5GZdIo/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=p2mBO5GZdIo&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Jaze",
+        "duracion": "3:12",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "Si te mentí - Macario Martínez | Short version | The Last of Us | Max",
+        "thumbnail": "https://i.ytimg.com/vi/2tbUgZXssYE/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=2tbUgZXssYE",
+        "canal": "Max Latinoamérica",
+        "duracion": "1:46",
+        "tag": "Series"
+      },
+      {
+        "titulo": "El Episodio de Spiderman que Muestra Que No Todo Depende de Ti",
+        "thumbnail": "https://i.ytimg.com/vi/rRGo9-q_Uhw/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=rRGo9-q_Uhw&t=1s&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Mau Lucero",
+        "duracion": "13:12",
+        "tag": "Comics"
+      },
+      {
+        "titulo": "Jaze, Caloncho - pensé en ti (feat. Caloncho) (Video Lyric)",
+        "thumbnail": "https://i.ytimg.com/vi/OByMEa_j6AA/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=OByMEa_j6AA",
+        "canal": "Jaze",
+        "duracion": "3:57",
+        "tag": "Rap"
+      },
+      {
+        "titulo": "TAN BIONICA - Tus Ojos Mil (Official Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/xoVT52iSdSk/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=xoVT52iSdSk",
+        "canal": "Tan Bionica",
+        "duracion": "4:17",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "TAN BIONICA - Mis Noches de Enero (Official Lyric Video)",
+        "thumbnail": "https://i.ytimg.com/vi/-6CbRbibzjc/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=-6CbRbibzjc",
+        "canal": "Tan Bionica",
+        "duracion": "5:03",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Mis Noches de Enero",
+        "thumbnail": "https://i.ytimg.com/vi/MoWi5oXduI0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=MoWi5oXduI0",
+        "canal": "Tan Bionica",
+        "duracion": "4:54",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "La Melodía de Dios",
+        "thumbnail": "https://i.ytimg.com/vi/J9r12iM1vxs/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=J9r12iM1vxs",
+        "canal": "Tan Bionica",
+        "duracion": "4:46",
+        "tag": "Reflexión"
+      },
+      {
+        "titulo": "Música",
+        "thumbnail": "https://i.ytimg.com/vi/bM_GOe331NU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=bM_GOe331NU",
+        "canal": "Tan Bionica",
+        "duracion": "5:26",
+        "tag": "Música"
+      },
+      {
+        "titulo": "El lado soleado de la calle",
+        "thumbnail": "https://i.ytimg.com/vi/MbuwCYAjHlE/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=MbuwCYAjHlE&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Cuarteto de Nos",
+        "duracion": "4:11",
+        "tag": "Reflexión"
+      },
+      {
+        "titulo": "Enamorado tuyo",
+        "thumbnail": "https://i.ytimg.com/vi/R5cbxTPZNL0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=R5cbxTPZNL0",
+        "canal": "Cuarteto de Nos",
+        "duracion": "4:20",
+        "tag": "Latin"
+      },
+      {
+        "titulo": "El Cuarteto De Nos | El Cinturón Gris (En Vivo)",
+        "thumbnail": "https://i.ytimg.com/vi/mq73yqxt_ok/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=mq73yqxt_ok",
+        "canal": "Cuarteto de Nos",
+        "duracion": "3:54",
+        "tag": "Rock"
+      },
+      {
+        "titulo": "Cuarteto De Nos - En el cuarto de Nico",
+        "thumbnail": "https://i.ytimg.com/vi/P-g7cAbH-qU/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=P-g7cAbH-qU",
+        "canal": "Cuarteto de Nos",
+        "duracion": "4:43",
+        "tag": "Rock"
+      },
+      {
+        "titulo": "Ao Haru Ride Opening (Cover Latino) - Sekai wa koi ni Ochiteiru +Acordes",
+        "thumbnail": "https://i.ytimg.com/vi/MSoNrP-20J0/hqdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=MSoNrP-20J0&pp=0gcJCY0JAYcqIYzv",
+        "canal": "ilonqueen",
+        "duracion": "5:49",
+        "tag": "Anime"
+      },
+      {
+        "titulo": "Michael Jackson - Remember The Time (Official Video)",
+        "thumbnail": "https://i.ytimg.com/vi/LeiFF0gvqcc/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=LeiFF0gvqcc&pp=0gcJCY0JAYcqIYzv",
+        "canal": "Michael Jackson",
+        "duracion": "9:17",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "Robbie Williams - Rock DJ (Regent Street) | Better Man | Official Movie Scene",
+        "thumbnail": "https://i.ytimg.com/vi/o3HOYdlte8w/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=o3HOYdlte8w",
+        "canal": "Robbie Williams",
+        "duracion": "3:42",
+        "tag": "Pop"
+      },
+      {
+        "titulo": "How to get OpenAI & Claude API for FREE | Unlimited Usage | o1, Claude 3.5 Sonnet, GPT-4o | Part-2",
+        "thumbnail": "https://i.ytimg.com/vi/Y_Pv7JVYBzM/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=Y_Pv7JVYBzM&t=1s",
+        "canal": "Devs Do Code",
+        "duracion": "16:00",
+        "tag": "Tecnología"
+      },
       {
         "titulo": "BAD BUNNY 🐇 ALBUM COMPLETO #DtMF",
         "thumbnail": "https://i.ytimg.com/vi/pn8RmRET-I8/sddefault.jpg",
-        "videoUrl": "https://www.youtube.com/watch?v=pn8RmRET-I8",
+        "videoUrl": "https://www.youtube.com/watch?v=pn8RmRET-I8&t=2302s",
         "canal": "Roni Diaz",
         "duracion": "1:15:12",
         "tag": "Urbano"
@@ -32,15 +672,7 @@
         "videoUrl": "https://www.youtube.com/watch?v=6bBMPgapnwc",
         "canal": "Cuarteto de Nos",
         "duracion": "3:41",
-        "tag": "Alternativo"
-      },
-      {
-        "titulo": "Rayos Laser - Tantas Cosas Dije Ayer (Visualizer)",
-        "thumbnail": "https://i.ytimg.com/vi/rpvhRsNKX1I/maxresdefault.jpg",
-        "videoUrl": "https://www.youtube.com/watch?v=rpvhRsNKX1I",
-        "canal": "Rayos Laser",
-        "duracion": "3:36",
-        "tag": "Electrónico"
+        "tag": "Rock"
       },
       {
         "titulo": "Diversión Sonora - Ya Hay Verano",
@@ -48,7 +680,7 @@
         "videoUrl": "https://www.youtube.com/watch?v=M0WVtz4awOI",
         "canal": "quierememuxxo",
         "duracion": "2:59",
-        "tag": "Rock"
+        "tag": "Verano"
       },
       {
         "titulo": "Sparkle (Original Version)",
@@ -56,7 +688,7 @@
         "videoUrl": "https://www.youtube.com/watch?v=MgNItWdfEIU",
         "canal": "RADWIMPS",
         "duracion": "6:51",
-        "tag": "Electro"
+        "tag": "Anime"
       },
       {
         "titulo": "The Peak",
@@ -64,7 +696,7 @@
         "videoUrl": "https://www.youtube.com/watch?v=WHKlMwYHb34",
         "canal": "SEKAI NO OWARI",
         "duracion": "3:47",
-        "tag": "Lounge"
+        "tag": "Pop"
       }
     ]
   },

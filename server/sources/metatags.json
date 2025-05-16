@@ -1,1 +1,99 @@
-{}
+{
+  "Música": {
+    "color": "#546A76",
+    "emoji": "🎶",
+    "tags": [
+      "Urbano",
+      "Urbano",
+      "Pop",
+      "Rock",
+      "Electro",
+      "Electrónico",
+      "Lounge",
+      "Indie",
+      "Alternative",
+      "Alternativo",
+      "K-Pop",
+      "Cover",
+      "J-Pop",
+      "Latin",
+      "Jazz",
+      "Clásica",
+      "Rap",
+      "Hip-Hop",
+      "Dance",
+      "Soul",
+      "Instrumental",
+      "RegionalMexicano",
+      "Tradicional",
+      "Electró",
+      "Música"
+    ]
+  },
+  "Educación y Conocimiento": {
+    "color": "#88A0A8",
+    "emoji": "📚",
+    "tags": [
+      "Tutorial",
+      "Educación",
+      "Historia",
+      "Cultura",
+      "Ciencia",
+      "Tecnología",
+      "Documental",
+      "Informativo",
+      "Infomativo",
+      "Consejos",
+      "Creatividad"
+    ]
+  },
+  "Entretenimiento": {
+    "color": "#B4CEB3",
+    "emoji": "🎉",
+    "tags": [
+      "Comedia",
+      "Parodia",
+      "Humor",
+      "Satírico",
+      "Unboxing",
+      "Cine",
+      "Series",
+      "Drama",
+      "Dramas",
+      "Aventura",
+      "Acción",
+      "Terror",
+      "Fantasía",
+      "Anime",
+      "Animación",
+      "Comics",
+      "Videojuegos",
+      "Juegos",
+      "CienciaFicción",
+      "Relajación"
+    ]
+  },
+  "Reflexión y Sociedad": {
+    "color": "#DBD3C9",
+    "emoji": "💭",
+    "tags": [
+      "Debate",
+      "Debates",
+      "Sociedad",
+      "Sociedaddebate",
+      "Motivación",
+      "Reflexión",
+      "Reflexiones",
+      "Vida",
+      "Salud",
+      "Religión",
+      "Social",
+      "Entretenimiento"
+    ]
+  },
+  "Estilo de Vida y Pasatiempos": {
+    "color": "#FAD4D8",
+    "emoji": "🏖️",
+    "tags": ["Hobby", "Viajes", "Verano", "Motociclismo", "Modelismo Selecto"]
+  }
+}
